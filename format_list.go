@@ -2,6 +2,7 @@ package ytdl
 
 import (
 	"bufio"
+	"fmt"
 	"io"
 	"sort"
 
@@ -105,6 +106,8 @@ func (formats *FormatList) add(infos []formatInfo) {
 				url:  info.URL,
 			}
 		}
+
+		format.VideoSize = fmt.Sprintf("%dx%d", info.Width, info.Height)
 
 		*formats = append(*formats, format)
 	}

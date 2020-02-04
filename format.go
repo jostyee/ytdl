@@ -25,12 +25,13 @@ const (
 type Format struct {
 	Itag
 
-	url    string
-	s      string
-	sig    string
-	stream string
-	conn   string
-	sp     string
+	url       string
+	s         string
+	sig       string
+	stream    string
+	conn      string
+	sp        string
+	VideoSize string
 }
 
 func parseFormat(input string) (*Format, error) {
